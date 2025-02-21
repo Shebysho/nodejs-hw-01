@@ -1,5 +1,5 @@
-const fs = require('fs/promises');
-const { PATH_DB } = require('../constants/contacts');
+import fs from 'fs/promises';
+import { PATH_DB } from '../constants/contacts.js';
 
 async function readContacts() {
   try {
@@ -11,4 +11,4 @@ async function readContacts() {
   }
 }
 
-module.exports = readContacts;
+export default readContacts;

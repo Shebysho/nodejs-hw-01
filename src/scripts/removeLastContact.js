@@ -1,5 +1,5 @@
-const readContacts = require('../utils/readContacts');
-const writeContacts = require('../utils/writeContacts');
+import readContacts from '../utils/readContacts.js';
+import writeContacts from '../utils/writeContacts.js';
 
 async function removeLastContact() {
   const contacts = await readContacts();

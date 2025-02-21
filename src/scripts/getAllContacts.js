@@ -1,4 +1,4 @@
-const readContacts = require('../utils/readContacts');
+import readContacts from '../utils/readContacts.js';
 
 async function getAllContacts() {
   const contacts = await readContacts();

@@ -7,7 +7,9 @@ async function generateContacts() {
   const count = parseInt(process.argv[2]) || 5;
   const contacts = await readContacts();
   for (let i = 0; i < count; i++) {
-    contacts.push(createFakeContact());
+    const newContact = createFakeContact();
+    newContact.name = faker.person.fullName(); 
+    contacts.push(newContact);
   }
   await writeContacts(contacts);
 }
